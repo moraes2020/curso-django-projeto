@@ -3,11 +3,13 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'global/home.html')
+    return render(request, 'recipes/home.html', context={
+        'name': 'Itailson'
+    })
 
 
 def contato(request):
-    return HttpResponse("Contato")
+    return render(request, 'me-apague/temp.html')
 
 
 def sobre(request):
